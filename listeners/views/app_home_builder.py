@@ -15,11 +15,11 @@ def build_app_home_view(
             "text": {
                 "type": "mrkdwn",
                 "text": (
-                    "*Built for neurodivergent teammates.*\n\n"
-                    "I reduce cognitive load in Slack for ADHD, dyslexia, autism, "
-                    "ESL, and screen-reader users — so nobody gets left out of the chat.\n\n"
+                    "*Access Coach*\n\n"
+                    "For neurodivergent teammates (ADHD, dyslexia, autism), "
+                    "ESL colleagues, and screen-reader users.\n\n"
                     "• *Plain language* — cut jargon, explain acronyms\n"
-                    "• *Thread digest* — scannable TL;DR / decisions / owners\n"
+                    "• *Thread digest* — TL;DR / decisions / owners\n"
                     "• *Alt text* — captions for shared images\n\n"
                     "DM me, *@mention* me, or use a *message shortcut* "
                     "(⋯ → More message shortcuts)."

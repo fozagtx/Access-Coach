@@ -1,65 +1,46 @@
-# Access Coach — Devpost (simple words)
+# Access Coach — Devpost
 
 **Track:** Slack Agent for Good  
 **Project name:** Access Coach  
 
 **Tagline:**  
-A Slack agent for neurodivergent teammates — cut jargon, shrink long threads, and caption images so everyone can keep up.
+Slack agent for neurodivergent teammates — plain language, low-load thread digests, and image alt text.
 
 ---
 
 ## Inspiration
 
-Slack moves fast. For neurodivergent people (ADHD, dyslexia, autism) — and for ESL teammates and screen-reader users — that speed often means getting left behind:
+Slack is where teams decide things. For people with ADHD, dyslexia, or autism — and for ESL teammates and screen-reader users — dense jargon, long threads, and images without captions make it hard to keep up.
 
-- Jargon and walls of text raise cognitive load  
-- Decisions hide inside long threads  
-- Images go out with no alt text  
-
-Most “accessibility” tools live on another website. Nobody opens them mid-chat.
-
-**Access Coach** is different: an inclusion coach *inside* Slack, one click on a real message — built first for neurodivergent access, useful for the whole team.
+Access Coach brings accessibility into the message itself: one click in Slack.
 
 ## What it does
 
-Not a generic rewrite bot. Three access tools designed for cognitive load and inclusion:
+1. **Plain language** — rewrite jargon; explain acronyms; short sentences  
+2. **Thread digest** — TL;DR, decisions, owners, next steps  
+3. **Alt text** — captions for shared images  
 
-1. **Plain language** — rewrite corporate jargon so brains that need clarity can follow  
-2. **Thread digest** — TL;DR → decisions → owners → next steps (scannable, not another wall of text)  
-3. **Alt text** — captions for images so screen-reader users aren’t locked out  
-
-How to use it:
-
-- Message ⋯ → **Rewrite plain language** / **Summarize thread** / **Suggest alt text**  
-- Or DM / @mention Access Coach  
-
-Then tap **Make shorter**, **Friendlier**, or **More formal** to match the reader — not just “sound nicer.”
+Use message shortcuts, DM, or @mention. Follow-up buttons: Make shorter / Friendlier / More formal.
 
 ## How we built it
 
-- **Slack Agent Kit** (Bolt + OpenAI Agents via OpenRouter)  
-- **MCP tools** that read the real Slack message, thread, or file  
-- **Slack MCP** for workspace search when connected  
-
-No fake data. Real Slack. Real accessibility.
+Slack Agent Kit (Bolt + OpenAI Agents via OpenRouter), MCP tools that read real Slack messages/threads/files, optional Slack MCP for workspace search.
 
 ## Challenges we ran into
 
-Standing up a real Slack agent (sandbox, scopes, Socket Mode) under a hard deadline — and keeping the product about *inclusion*, not another chatbot.
+Shipping a real Slack agent under the hackathon deadline: sandbox, scopes, Socket Mode, OpenRouter.
 
 ## Accomplishments that we're proud of
 
-A working Slack agent judges can click, with a clear **Agent for Good** story: neurodivergence, ESL, and screen-reader access where work already happens.
+A working Access Coach in Slack with rewrite, digest, and alt text — aimed at neurodivergent access and Agent for Good.
 
 ## What we learned
 
-Accessibility wins when it meets people in Slack — not when it asks them to leave the conversation.
+Accessibility help is most useful when it sits inside Slack, on the message people are already reading.
 
 ## What's next for Access Coach
 
-- More languages  
-- “Add alt text before you post” nudges  
-- Team writing norms tuned for cognitive accessibility  
+More languages, pre-post alt-text reminders, team writing norms for cognitive accessibility.
 
 ## Built With
 
@@ -67,16 +48,16 @@ slack · bolt-python · openai-agents · openrouter · mcp
 
 ## Try it out
 
-- Slack sandbox: `https://access-coach.slack.com` _(confirm in browser)_  
-- Access for: `slackhack@salesforce.com`, `testing@devpost.com`  
-- GitHub: https://github.com/fozagtx/-Access-Coach  
+- Sandbox: `https://access-coach.slack.com`  
+- Judges: `slackhack@salesforce.com`, `testing@devpost.com`  
+- GitHub: https://github.com/fozagtx/Access-Coach  
 
 ## Architecture
 
-See `ARCHITECTURE.md` — attach that diagram on Devpost.
+See `ARCHITECTURE.md`.
 
 ---
 
-## 10-second pitch
+## Pitch
 
-“Access Coach is a Slack agent built for neurodivergent teammates. One click: plain-language rewrite, scannable thread digests, and image alt text — so people with ADHD, dyslexia, ESL needs, or screen readers aren’t left out of the chat.”
+“Access Coach is a Slack agent for neurodivergent teammates. One click: plain language, thread digests, and alt text.”
