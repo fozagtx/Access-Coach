@@ -1,0 +1,28 @@
+#!/usr/bin/expect -f
+set timeout 180
+spawn slack install -E local --org-workspace-grant all -f
+expect {
+    -re "enter the number 1" {
+        send "1\r"
+        exp_continue
+    }
+    -re "Choose a team" {
+        send "1\r"
+        exp_continue
+    }
+    -re "leave this team|Installed apps will belong|App Create" {
+        send "Y\r"
+        exp_continue
+    }
+    -re "workspace" {
+        send "all\r"
+        exp_continue
+    }
+    -re "invalid_manifest" {
+        puts "MANIFEST_ERROR"
+        exit 2
+    }
+    eof
+}
+catch wait result
+exit [lindex $result 3]

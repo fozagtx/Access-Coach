@@ -1,0 +1,26 @@
+#!/usr/bin/expect -f
+set timeout 120
+spawn slack run --org-workspace-grant all -f
+expect {
+    -re "enter the number 1" {
+        send "1\r"
+        exp_continue
+    }
+    -re "Choose a team|Select an app|Select a workspace" {
+        send "1\r"
+        exp_continue
+    }
+    -re "update|Install|manifest|\\(Y/n\\)|yes" {
+        send "Y\r"
+        exp_continue
+    }
+    -re "Connected|Socket Mode|listening|Bolt app|started|App is running|watching" {
+        puts "\nSERVER_UP"
+    }
+    timeout {
+        puts "\nTIMEOUT_WAITING"
+    }
+    eof
+}
+# Keep running forever; parent will background this
+interact
