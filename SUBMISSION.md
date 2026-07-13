@@ -4,77 +4,72 @@
 **Project name:** Access Coach  
 
 **Tagline:**  
-One click in Slack to make messages clearer for everyone.
+A Slack agent for neurodivergent teammates — cut jargon, shrink long threads, and caption images so everyone can keep up.
 
 ---
 
 ## Inspiration
 
-Slack is where teams talk. But a lot of messages are hard to understand.
+Slack moves fast. For neurodivergent people (ADHD, dyslexia, autism) — and for ESL teammates and screen-reader users — that speed often means getting left behind:
 
-- Too much work jargon  
-- Super long threads  
-- Pictures with no description  
+- Jargon and walls of text raise cognitive load  
+- Decisions hide inside long threads  
+- Images go out with no alt text  
 
-That hurts people who learn English, people with ADHD or dyslexia, and people who use screen readers.
+Most “accessibility” tools live on another website. Nobody opens them mid-chat.
 
-Most “accessibility” tools are on another website. Nobody opens them when they are busy chatting.
-
-So we built help **inside Slack** — one click on a message.
+**Access Coach** is different: an inclusion coach *inside* Slack, one click on a real message — built first for neurodivergent access, useful for the whole team.
 
 ## What it does
 
-**Access Coach** is a Slack bot that helps your team write clearer.
+Not a generic rewrite bot. Three access tools designed for cognitive load and inclusion:
 
-Three things it can do:
-
-1. **Rewrite** — Turn confusing messages into plain English  
-2. **Summarize** — Shorten a long thread: what was decided, who owns what, what’s next  
-3. **Alt text** — Write a short description for a picture so screen readers can read it  
+1. **Plain language** — rewrite corporate jargon so brains that need clarity can follow  
+2. **Thread digest** — TL;DR → decisions → owners → next steps (scannable, not another wall of text)  
+3. **Alt text** — captions for images so screen-reader users aren’t locked out  
 
 How to use it:
 
-- Right-click / more actions on a message → pick Rewrite, Summarize, or Alt text  
-- Or message Access Coach in a DM  
-- Or @mention it in a channel  
+- Message ⋯ → **Rewrite plain language** / **Summarize thread** / **Suggest alt text**  
+- Or DM / @mention Access Coach  
 
-After it answers, you can tap buttons like **Make shorter**, **Friendlier**, or **More formal**.
+Then tap **Make shorter**, **Friendlier**, or **More formal** to match the reader — not just “sound nicer.”
 
 ## How we built it
 
-- **Slack Agent Kit** — Slack’s way to build AI agents (Bolt + Claude)  
-- **MCP tools** — Small tools that read the real Slack message, thread, or file  
-- **Slack MCP** — Lets the agent search the workspace when connected  
+- **Slack Agent Kit** (Bolt + OpenAI Agents via OpenRouter)  
+- **MCP tools** that read the real Slack message, thread, or file  
+- **Slack MCP** for workspace search when connected  
 
-No fake data. It works on real Slack messages.
+No fake data. Real Slack. Real accessibility.
 
 ## Challenges we ran into
 
-Getting a real Slack app running fast: login, permissions, and connecting the AI agent without breaking the demo.
+Standing up a real Slack agent (sandbox, scopes, Socket Mode) under a hard deadline — and keeping the product about *inclusion*, not another chatbot.
 
 ## Accomplishments that we're proud of
 
-A working Slack agent people can actually click — rewrite, summarize, and alt text — built for social good (accessibility).
+A working Slack agent judges can click, with a clear **Agent for Good** story: neurodivergence, ESL, and screen-reader access where work already happens.
 
 ## What we learned
 
-You do not need a fancy website to help people. Putting accessibility **where the team already works** (Slack) is more useful.
+Accessibility wins when it meets people in Slack — not when it asks them to leave the conversation.
 
 ## What's next for Access Coach
 
 - More languages  
-- Remind people to add alt text before they post  
-- Stronger search for team writing guides  
+- “Add alt text before you post” nudges  
+- Team writing norms tuned for cognitive accessibility  
 
 ## Built With
 
-slack · bolt-python · claude-agent-sdk · mcp
+slack · bolt-python · openai-agents · openrouter · mcp
 
 ## Try it out
 
-- Slack sandbox: _(paste URL after install)_  
-- Give access to: `slackhack@salesforce.com` and `testing@devpost.com`  
-- GitHub: _(paste when ready)_  
+- Slack sandbox: `https://access-coach.slack.com` _(confirm in browser)_  
+- Access for: `slackhack@salesforce.com`, `testing@devpost.com`  
+- GitHub: https://github.com/fozagtx/-Access-Coach  
 
 ## Architecture
 
@@ -82,6 +77,6 @@ See `ARCHITECTURE.md` — attach that diagram on Devpost.
 
 ---
 
-## 10-second pitch (say this out loud)
+## 10-second pitch
 
-“Access Coach is a Slack agent that makes messages easier to understand. One click: rewrite jargon, summarize long threads, or add alt text for pictures — so more people on the team can follow along.”
+“Access Coach is a Slack agent built for neurodivergent teammates. One click: plain-language rewrite, scannable thread digests, and image alt text — so people with ADHD, dyslexia, ESL needs, or screen readers aren’t left out of the chat.”

@@ -1,24 +1,24 @@
 {
   "display_information": {
     "name": "Access Coach",
-    "description": "Make Slack clearer for everyone — plain language, thread digests, and alt text for accessibility.",
+    "description": "Slack agent for neurodivergent teammates — plain language, low-load thread digests, and alt text.",
     "background_color": "#1a1a2e"
   },
   "features": {
     "agent_view": {
-      "agent_description": "Access Coach helps your team write clearer messages, summarize long threads, and add alt text — so neurodivergent, ESL, and screen-reader users can fully participate.",
+      "agent_description": "Built for neurodivergent, ESL, and screen-reader teammates: rewrite jargon, digest long threads for cognitive load, and add alt text — all inside Slack.",
       "suggested_prompts": [
         {
           "title": "Plain language",
-          "message": "Rewrite this in plain language so everyone on the team can understand it quickly."
+          "message": "Rewrite this for neurodivergent and ESL teammates — plain language, short sentences, explain acronyms."
         },
         {
           "title": "Thread digest",
-          "message": "Summarize this thread: decisions, owners, and next steps."
+          "message": "Summarize this thread for low cognitive load: TL;DR, decisions, owners, next steps."
         },
         {
           "title": "Alt text",
-          "message": "Suggest accessible alt text for the image I shared."
+          "message": "Suggest accessible alt text for the image I shared so screen-reader users can follow."
         }
       ]
     },

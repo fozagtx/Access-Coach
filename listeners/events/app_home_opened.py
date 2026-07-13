@@ -10,15 +10,24 @@ from listeners.views.app_home_builder import build_app_home_view
 SUGGESTED_PROMPTS = [
     {
         "title": "Plain language",
-        "message": "Rewrite this in plain language so everyone can understand it.",
+        "message": (
+            "Rewrite this for neurodivergent and ESL teammates — "
+            "plain language, short sentences, explain acronyms."
+        ),
     },
     {
         "title": "Thread digest",
-        "message": "Summarize this thread: decisions, owners, and next steps.",
+        "message": (
+            "Summarize this thread for low cognitive load: "
+            "TL;DR, decisions, owners, next steps."
+        ),
     },
     {
         "title": "Alt text",
-        "message": "Suggest accessible alt text for the image I shared.",
+        "message": (
+            "Suggest accessible alt text for the image I shared "
+            "so screen-reader users can follow."
+        ),
     },
 ]
 
